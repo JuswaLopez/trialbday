@@ -1,12 +1,11 @@
-
 * {
   transition: all 0.2s ease-in-out;
 }
 
 body {
   background: #DCE35B; 
-background: -webkit-linear-gradient(to right, #662D8C , #ED1E79); 
-background: linear-gradient(to right, #662D8C , #ED1E79); 
+  background: -webkit-linear-gradient(to right, #662D8C , #ED1E79); 
+  background: linear-gradient(to right, #662D8C , #ED1E79); 
   display: grid;
   place-items: center;
   height: 100vh;
@@ -27,49 +26,36 @@ background: linear-gradient(to right, #662D8C , #ED1E79);
   align-items: center;
   padding: 1em;
   overflow: hidden;
-  color:#DCE35B;
-}
-
-@media only screen and (min-width: 1000px) {
-  .card {
-    flex-direction: row-reverse;
-  }
-  .card img.birthday {
-    width: 40%;
-    max-width: 50vw;
-    max-height: unset;
-    border-radius: 30px;
-  }
-}
-
-@media only screen and (max-height: 640px) {
-  .card {
-    flex-direction: row-reverse;
-  }
-  .card img.birthday {
-    width: 100%;
-    max-width: 50vw;
-    max-height: unset;
-  }
-}
-
-img.birthday {
-  max-height: 40vh;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: #DCE35B;
 }
 
 .text {
-  padding: 3em;
+  padding: 1em;
   text-align: left;
-  width: 40%;
-  font-size: 25px;
-}
-.text h1{
-  font-family:cursive;
-  font-size: 40px;
-}
-.space {
-  height: 100px;
+  width: 90%;
+  font-size: 16px;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
 }
 
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
 
+  .text {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 95%;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+}
